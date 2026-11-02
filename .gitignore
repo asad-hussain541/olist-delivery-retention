@@ -4,3 +4,4 @@ data/raw/*.csv
 data/*.db
 __pycache__/
 .ipynb_checkpoints/
+docs/exercise_hints.md

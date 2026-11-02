@@ -1,12 +1,8 @@
--- 03_reviews_vs_lateness.sql   (YOUR TURN — exercise 2)
+-- 03_reviews_vs_lateness.sql
 -- Business question: How much does lateness hurt customer satisfaction?
 -- Output: one row per lateness bucket -> bucket, orders, avg_review, pct_1_or_2_star
 -- Buckets (days delivered vs. promised date):
 --   'early 7+ days', 'early 0-7 days', 'late 1-3 days', 'late 4-7 days', 'late 8+ days'
 --
--- Hints:
---   * Trap: some orders have MORE THAN ONE review row. Aggregate reviews to one row per
---     order first (a CTE with AVG(review_score) GROUP BY order_id), then join.
---     Joining raw reviews would double-count those orders. Interviewers love this one.
---   * Build the buckets with CASE WHEN on days_vs_promise.
---   * Sort the buckets in a logical order, not alphabetically.
+--
+-- Status: query in progress.
