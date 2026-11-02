@@ -1,0 +1,6 @@
+# raw data and the built database are not committed (size + dataset license);
+# see README for the download link, then run load_data.py
+data/raw/*.csv
+data/*.db
+__pycache__/
+.ipynb_checkpoints/

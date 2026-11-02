@@ -1,0 +1,9 @@
+-- 02_late_by_state.sql   (YOUR TURN — exercise 1)
+-- Business question: Where is the delivery promise broken most often?
+-- Output: customer_state, orders, pct_late, avg_days_to_deliver
+--         for states with at least 500 delivered orders, worst pct_late first.
+--
+-- Hints:
+--   * State lives in customers; join orders -> customers on customer_id.
+--   * Reuse the "late" logic from 01_delivery_kpis.sql.
+--   * "At least 500 orders" filters groups, so it goes in HAVING, not WHERE.

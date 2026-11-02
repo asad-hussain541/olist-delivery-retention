@@ -1,0 +1,11 @@
+-- 04_repeat_after_late_first_order.sql   (YOUR TURN — exercise 3, the core question)
+-- Business question: Are customers whose FIRST order arrived late less likely to buy again?
+-- Output: first_order_late (0/1), customers, repeat_customers, repeat_rate_pct
+--
+-- Hints:
+--   * A person = customers.customer_unique_id. (customer_id is new on every order.)
+--   * Number each person's delivered orders by purchase time:
+--       ROW_NUMBER() OVER (PARTITION BY customer_unique_id ORDER BY order_purchase_timestamp)
+--   * First orders = row 1. Repeat customer = has a row 2.
+--   * Fairness check: a customer who first bought in Aug 2018 had no time to come back
+--     before the data ends (Oct 2018). Keep only first orders placed before 2018-03-01.
